@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Map port 3000 in the container to port 3000 on the host
+      - "3000:3000"
     volumes:
-      - .:/app
-      - /app/node_modules
-    command: pnpm start # Run the Next.js production server 
+      - /app/node_modules # Only mount node_modules, avoid overwriting .next
+    command: ["sh", "-c", "pnpm build && pnpm start"]
+
