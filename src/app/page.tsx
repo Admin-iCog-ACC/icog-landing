@@ -32,16 +32,16 @@ export default function Home() {
             />
           </div>
           
-          <h1 className="text-4xl font-bold mb-4">Website Under Construction</h1>
+          <h1 className="text-4xl font-bold mb-4">Website Maintenance</h1>
           
           <p className="text-xl mb-8 max-w-md">
-            We&apos;re working hard to bring you something amazing. Please check back soon!
+            We are currently maintaining our website and will be back soon. In the meantime, please check our social media links below for updates.
           </p>
           
           <div className="w-24 h-1 bg-black/10 dark:bg-white/20 rounded-full mb-8"></div>
           
           <p className="text-sm opacity-70 font-[family-name:var(--font-geist-mono)]">
-            Expected completion: Coming Soon
+            We appreciate your patience
           </p>
         </div>
 
