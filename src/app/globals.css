@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Social media brand colors */
+  --facebook-color: #1877F2;
+  --x-color: #000000;
+  --linkedin-color: #0A66C2;
+  --instagram-color: #E4405F;
+  --youtube-color: #FF0000;
+  --tiktok-color: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    
+    /* Adjust some colors for better visibility in dark mode */
+    --x-color: #FFFFFF;
+    --tiktok-color: #FFFFFF;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Social media icon hover effects */
+.facebook-icon:hover {
+  filter: invert(31%) sepia(98%) saturate(1954%) hue-rotate(202deg) brightness(97%) contrast(96%);
+}
+
+.x-icon {
+  filter: brightness(0%) saturate(100%) invert(var(--x-filter-invert));
+}
+
+.linkedin-icon:hover {
+  filter: invert(29%) sepia(94%) saturate(1268%) hue-rotate(187deg) brightness(92%) contrast(101%);
+}
+
+.instagram-icon:hover {
+  filter: invert(40%) sepia(57%) saturate(2078%) hue-rotate(312deg) brightness(101%) contrast(96%);
+}
+
+.youtube-icon:hover {
+  filter: invert(13%) sepia(100%) saturate(5810%) hue-rotate(1deg) brightness(115%) contrast(115%);
+}
+
+.tiktok-icon:hover {
+  filter: brightness(0%) saturate(100%) invert(var(--tiktok-filter-invert));
+}
+
+/* Dark mode needs an inversion for black colors to show as white */
+@media (prefers-color-scheme: light) {
+  :root {
+    --x-filter-invert: 0%;
+    --tiktok-filter-invert: 0%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --x-filter-invert: 100%;
+    --tiktok-filter-invert: 100%;
+  }
+}
